@@ -1,0 +1,18 @@
+/*
+ Light sensor analogue read value
+ */
+
+int sensePin =0;
+int ledPin =9;
+
+void setup() {
+  analogReference (DEFAULT);
+  Serial.begin (9600);
+
+}
+
+void loop() {
+  Serial.println (analogRead(sensePin));
+  delay(500);
+
+}
