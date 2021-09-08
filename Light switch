@@ -1,0 +1,19 @@
+
+int sensePin =0;
+int ledPin = 9;
+
+void setup() {
+analogReference(DEFAULT);
+pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+
+ 
+int val = analogRead(sensePin);
+val = constrain(val,95,360);
+int ledLevel = map(val,95,360,255,0);
+analogWrite (ledPin, ledLevel);
+
+
+}
